@@ -32,14 +32,10 @@ jobs:
           NEXT_PUBLIC_BASE_PATH: /youtube-2020-august-github-pages-github-actions
       - run: touch ./out/.nojekyll
 
-  Deploy:
-    needs: Build
-    runs-on: ubuntu-latest
-    steps:
-    - name: Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@3.6.2
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages # The branch the action should deploy to.
-        FOLDER: out # The folder the action should deploy.
-        CLEAN: true # Automatically remove deleted files from the deploy branch
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@3.6.2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: out # The folder the action should deploy.
+          CLEAN: true # Automatically remove deleted files from the deploy branch
