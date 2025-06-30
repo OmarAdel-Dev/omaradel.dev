@@ -1,6 +1,6 @@
 {
   "name": "omar-adel-portfolio",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://omaradel-dev.github.io/omaradel.dev",
